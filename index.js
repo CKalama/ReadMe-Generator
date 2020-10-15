@@ -28,19 +28,19 @@ const questions = [
 ];
 console.log(questions);
 
-// function to write README file
-// function writeToFile(fileName, data) {
-//     return fs.writeFileSync(fileName, data, function(err) {
+//function to write README file
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(fileName, data, function(err) {
         
-//     })
-// };
+    })
+};
 
-// // function to initialize program
+// function to initialize program
 // function init() {
 //     inquirer.prompt(questions).then() => {
 
 //     }
 // }
 
-// // function call to initialize program
-// init();
+// function call to initialize program
+init();
