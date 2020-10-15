@@ -7,23 +7,35 @@ const generateMarkdown = require("./generateMarkdown")
 const questions = [
     {
     type: "input", 
-    name: "gitHub Profile", 
-    question: "Whats Your Username?" 
+    message: "Whats Your Username?", 
+    name: "github", 
+    
     }, {
     type: "input",
-    email: "Email",
-    question: "What is your current email?"
+    question: "What is your current email?",
+    name: "email",
     }, 
     {
     type: "input",
-    link: "link",
-    question: "What is the deployed Github Link?"
+    question: "What is the deployed Github Link?",
+    name: "link",
     },
     {
     type:"input",
-    link: "text",
-    question: "Please Describe your Repository/Project."
+    question: "Please List a Table of Contents",
+    name: "table",
+    },
+    {
+    type:"input",
+    question: "Please name any Installation Requirements",
+    name: "install",
+    },
+    {
+    type:"input",
+    question: "Please Describe Your Repo/Project.",
+    name:"describe"
     }
+
 
 ];
 console.log(questions);
