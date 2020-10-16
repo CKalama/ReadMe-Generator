@@ -21,7 +21,7 @@ const questions = [
     name: "link",
     },
     {
-    type:"input",
+    type:"list",
     question: "Please List a Table of Contents",
     name: "table",
     },
@@ -44,7 +44,7 @@ console.log(questions);
 function writeToFile(fileName, data) {
     return fs.writeFileSync(fileName, data, function(err) {
         
-    })
+    });
 };
 
 // function to initialize program
