@@ -1,6 +1,11 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+console.log("he", data);
+console.log("function runnning");
+
+
+
+  return `# ${data.repoName}
 
 `;
 }

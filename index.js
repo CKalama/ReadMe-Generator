@@ -3,7 +3,8 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./generateMarkdown")
 
-// array of questions for user Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+// function to initialize program
+function init() {
     inquirer.prompt ([
         {
             message: "Please Type the Name of This Repo",
@@ -50,27 +51,19 @@ const generateMarkdown = require("./generateMarkdown")
             type:"input",
             name:"questions"
         }
-    ]).then(function answers({repoName, description, table, install, usage, licenses, contributors,test,questions}) {
-        console.log(answers("repoName, description, table, install, usage, licenses, contributors,test,questions"));
+     
 
-        fs.writeFile("log.txt", generateMarkdown(repoName, description, table, install, usage, licenses, contributors,test,questions), function(err) {
+
+    ]).then(({repoName, description, table, install, usage, licenses, contributors,test,questions}) => {
+        console.log(repoName, description, table, install, usage, licenses, contributors,test,questions);
+
+        fs.writeFile("log.md", generateMarkdown({repoName, description, table, install, usage, licenses, contributors,test,questions}), function(err) {
             if (err) console.log(err)
             console.log("success!");
         })
 
     })
-
-
-//function to write README file
-function writeToFile(fileName, data) {
-    return fs.writeFileSync(fileName, data, function(err) {
-        if (err) console.log(err)
-        console.log("success!")
-    });
-};
-
-// function to initialize program
-function init() {}
+}
 
 init();
 
