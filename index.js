@@ -47,7 +47,7 @@ function init() {
             name:"test"
         },
         {
-            message:"Please label any additional Questions here",
+            message:"Please label Additional Team Notes and Common FAQ",
             type:"input",
             name:"questions"
         }
