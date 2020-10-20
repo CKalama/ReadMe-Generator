@@ -4,42 +4,56 @@ const inquirer = require("inquirer");
 const generateMarkdown = require("./generateMarkdown")
 
 // array of questions for user Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-// const questions = [
-//     {
-//     type: "input", 
-//     message: "Whats Your Username?", 
-//     name: "github", 
-//     }
-    
-    // }, {
-    // type: "input",
-    // question: "What is your current email?",
-    // name: "email",
-    // }, 
-    // {
-    // type: "input",
-    // question: "What is the deployed Github Link?",
-    // name: "link",
-    // },
-    // {
-    // type:"list",
-    // question: "Please List a Table of Contents",
-    // name: "table",
-    // },
-    // {
-    // type:"input",
-    // question: "Please name any Installation Requirements",
-    // name: "install",
-    // },
-    // {
-    // type:"input",
-    // question: "Please Describe Your Repo/Project.",
-    // name:"describe"
-    // }
+    inquirer.prompt ([
+        {
+            message: "Please Type the Name of This Repo",
+            type:"input",
+            name:"repoName"
+        },
+        {
+            message:"Please give a detailed description of your Repo...",
+            type:"input",
+            name:"description"
+        },
+        {
+            message:"Please Label Your Table of Contents...",
+            type:"input",
+            name:"table"
+        },
+        {
+            message:"Please label any additional installatons",
+            type:"input",
+            name:"install"
+        },
+        {
+            message:"Please Describe How to Use Your Repo",
+            type:"input",
+            name:"usage"
+        },
+        {
+            message:"Please label any Additional Licenses",
+            type:"input",
+            name:"licenses"   
+        },
+        {
+            message:"Please Name any Contributing Partners",
+            type:"input",
+            name:"contributors"
+        },
+        {
+            message:"Please Describe How to Test Your Repo",
+            type:"input",
+            name:"test"
+        },
+        {
+            message:"Please label any additional Questions here",
+            type:"input",
+            name:"questions"
+        }
+    ]).then(function answers({repoName, description, table, install, usage, licenses, contributors,test,questions}) {
+        console.log(answers("repoName, description, table, install, usage, licenses, contributors,test,questions"));
+    })
 
-
-//];
-// console.log(questions);
 
 //function to write README file
 function writeToFile(fileName, data) {
@@ -49,16 +63,7 @@ function writeToFile(fileName, data) {
 };
 
 // function to initialize program
-function init() {
-    inquirer.prompt({
-        type: "input", 
-        message: "Whats Your Username?", 
-        name: "github", 
-        }).then((answer) => {
-        console.log(answer.github);
-    //writeToFile(generateMarkdown());
-})
-}
+function init() {}
 
 init();
 

@@ -1,0 +1,47 @@
+Original Array for Questions. In this one, inquirer.prompt was not used which would not have allowed us to use Inquirer in general.
+// const questions = [
+//     {
+//     type: "input", 
+//     message: "Whats Your Username?", 
+//     name: "github", 
+//     }
+    
+    // }, {
+    // type: "input",
+    // question: "What is your current email?",
+    // name: "email",
+    // }, 
+    // {
+    // type: "input",
+    // question: "What is the deployed Github Link?",
+    // name: "link",
+    // },
+    // {
+    // type:"list",
+    // question: "Please List a Table of Contents",
+    // name: "table",
+    // },
+    // {
+    // type:"input",
+    // question: "Please name any Installation Requirements",
+    // name: "install",
+    // },
+    // {
+    // type:"input",
+    // question: "Please Describe Your Repo/Project.",
+    // name:"describe"
+    // }
+
+
+//];
+// console.log(questions);
+
+- This is the first attempt at writing the function init, We needed the inquirer prompt above in the questions array not in the function. 
+  // inquirer.prompt({
+    //     type: "input", 
+    //     message: "Whats Your Username?", 
+    //     name: "github", 
+    //     }).then((answer) => {
+    //     console.log(answer.github);
+    //writeToFile(generateMarkdown());
+})
